@@ -5,3 +5,6 @@ class kNN:
 
     def predict(self, objects_to_classify):
         return []
+
+    def score(self, objects_to_identify, correct_labels):
+        return 0.1

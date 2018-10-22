@@ -13,3 +13,10 @@ class kNNTest(unittest.TestCase):
         result = solution.predict([])
 
         self.assertIsInstance(result, list)
+
+    def test_score(self):
+        solution = knn.kNN(1, [])
+
+        result = solution.score([], [])
+
+        self.assertIsInstance(result, float)
