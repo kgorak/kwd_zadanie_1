@@ -1,11 +1,11 @@
 import unittest
 import pandas
 
-import knn.main as main
+import knn.data as data
 
 
-class MainTest(unittest.TestCase):
+class DataTest(unittest.TestCase):
     def test_load_learning_data(self):
-        result = main.load_learning_data()
+        result = data.load_learning_data()
 
         self.assertIsInstance(result, pandas.DataFrame)
