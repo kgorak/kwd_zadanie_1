@@ -5,7 +5,7 @@ import pandas
 def load_learning_data():
     root = os.path.dirname(__file__)
     filepath = os.path.join(root, '../iris.data.learning')
-    learning_data = pandas.read_csv(filepath)
+    learning_data = pandas.read_csv(filepath, header=None)
 
     return learning_data
 
@@ -13,7 +13,7 @@ def load_learning_data():
 def load_testing_data():
     root = os.path.dirname(__file__)
     filepath = os.path.join(root, '../iris.data.test')
-    test_data = pandas.read_csv(filepath)
+    test_data = pandas.read_csv(filepath, header=None)
 
     return test_data
 
