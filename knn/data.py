@@ -10,9 +10,16 @@ def load_learning_data():
     return learning_data
 
 
-def main():
-    pass
+def load_testing_data():
+    root = os.path.dirname(__file__)
+    filepath = os.path.join(root, '../iris.data.test')
+    test_data = pandas.read_csv(filepath)
+
+    return test_data
 
 
-if __name__ == '__main__':
-    main()
+def load_data():
+    learning_data = load_learning_data()
+    testing_data = load_testing_data()
+
+    return learning_data, testing_data
