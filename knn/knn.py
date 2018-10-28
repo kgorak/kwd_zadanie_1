@@ -62,5 +62,18 @@ class kNN:
 
         return retVal
 
-    def score(self, objects_to_identify, correct_labels):
-        return 0.1
+    def score(self, objects_to_classify, correct_labels):
+        assert(len(objects_to_classify) == len(correct_labels))
+
+        number_of_labels = len(objects_to_classify)
+
+        predicted_labels = self.predict(objects_to_classify)
+
+        correct = 0
+
+        for predicted_label, correct_label in zip(predicted_labels, correct_labels):
+            if predicted_label == correct_label:
+                correct += 1
+
+        return '{}/{} = {}'.format(
+            correct, number_of_labels, correct/number_of_labels)
