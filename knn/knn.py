@@ -75,5 +75,4 @@ class kNN:
             if predicted_label == correct_label:
                 correct += 1
 
-        return '{}/{} = {}'.format(
-            correct, number_of_labels, correct/number_of_labels)
+        return correct/number_of_labels
